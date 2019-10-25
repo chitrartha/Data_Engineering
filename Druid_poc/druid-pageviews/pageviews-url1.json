@@ -1,0 +1,20 @@
+{
+  "queryType": "timeseries",
+  "dataSource": "pageviews",
+  "intervals": [
+    "2012-08-04/2018-11-30"
+  ],
+  "granularity": "hour",
+  "filter": {
+    "type": "selector",
+    "dimension": "url",
+    "value": "http://site.com/1"
+  },
+  "aggregations": [
+    {
+      "type": "longSum",
+      "fieldName": "count",
+      "name": "pageviews_url"
+    }
+  ]
+}
